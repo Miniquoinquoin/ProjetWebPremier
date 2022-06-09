@@ -1,0 +1,372 @@
+@font-face
+{
+    font-family: 'Dayrom';
+    src: url('polices/dayrom.eot');
+    src: url('polices/dayrom.eot?#iefix') format('embedded-opentype'),
+         url('polices/dayrom.woff') format('woff'),
+         url('polices/dayrom.ttf') format('truetype'),
+         url('polices/dayrom.svg#Dayrom') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'capture_itregular';
+    src: url('polices/Capture_it-webfont.eot');
+    src: url('polices/Capture_it-webfont.eot?#iefix') format('embedded-opentype'),
+         url('polices/Capture_it-webfont.woff2') format('woff2'),
+         url('polices/Capture_it-webfont.woff') format('woff'),
+         url('polices/Capture_it-webfont.ttf') format('truetype'),
+         url('polices/Capture_it-webfont.svg#capture_itregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+body{
+	max-width: 90em;
+	min-width: 50em;
+	margin: auto;
+	background: url(Image/Fond_fantaisie.png) fixed;
+    background-size: cover;
+    font-family: cursive;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+i{
+    -webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear
+}
+
+/* En tete */
+
+header{
+    height: 15em;
+}
+
+#video_fond{
+    position: absolute;
+    top: 0;
+    width: 90em;
+    z-index: -100;
+}
+
+/* Menu de navigation */
+
+nav ul{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 1em;
+    margin-bottom: -0.5em;
+}
+
+nav li{
+    list-style-type: none;
+    margin: 0 0.5em 0 0.5em;
+}
+
+nav button{
+    font-family: Dayrom, serif;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+nav button:hover{
+    text-decoration: underline;
+}
+
+nav a{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+
+    text-decoration: none;
+    color: white;
+}
+
+.en-tete{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    font-weight: normal;
+ }
+
+ .en-tete a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+ }
+
+header h1{
+ 	font-weight: normal;
+ }
+
+
+/* Corp de page */
+
+section{
+ 	display: flex;
+ 	flex-direction: column;
+ 	justify-content: center;
+    align-items: center;
+ 	background: rgb(200, 0, 50);
+}
+
+#introduction{
+    width: 80%;
+    text-align: justify;
+}
+
+section article{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+    width: 30%;
+    transition: width 2s ease 100ms;
+
+
+	align-items: center;
+	margin: 3em 2em 0 2em;
+	text-align: justify; 
+}
+
+section article:hover{
+    width: 90%;
+}
+
+section article p,  section article:hover li{
+    font-size: 1em;
+    transition: font-size 2s ease 100ms;
+}
+
+section article:hover p, section article:hover li{
+    font-size: 4em;
+}
+
+h2{
+    font-family: capture_itregular, serif;
+    font-size: 2em;
+ }
+
+
+section h3{
+    font-family: Dayrom, serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+section li{
+    text-align: left;
+    margin-bottom: 0.5em;
+}
+
+
+.Cadre{
+ 	width: 90%;
+    filter: blur(10px);
+    }
+
+.Cadre:hover{
+    filter: blur(0px);
+}
+
+#Bouton_Plus{
+    width: 8em;
+    height: 2em;
+    margin: 1em auto 1em auto;
+    background-color: rgb(30, 30, 230);
+    font-weight: bold;
+    color: white;
+    border: none;
+}
+
+#Bouton_Plus:hover{
+    width: 8.5em;
+    height: 2.1em;
+}
+
+/* Tableau */
+
+#tableau{
+    display: none;
+}
+
+table{
+    border-collapse: collapse;
+    text-align: center;
+    width: 80%;
+    border: solid black 2px;
+}
+
+table .separation{
+    border-bottom: black solid 2px;
+}
+
+table td, table th{
+    border-right: black solid 2px;
+}
+
+/* Pied de page */
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(35, 105, 15);
+    color: white;
+ }
+
+ .bouton-padding{
+    padding-bottom: 1em;
+ }
+
+.footerpartie{
+    width: 40%;
+    margin: 0 auto 0 auto;
+}
+
+#h2decal{
+    margin-left: 10%;
+}
+
+
+
+.footersection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 95%;
+}
+
+.icone{
+    list-style-image: url('Image/Maison.png');
+}
+
+footer li{
+    list-style:none;
+}
+
+li h3:before{
+    content:"";
+    font-weight:bold;
+    border: 2px solid;
+    margin-right: 1em;
+}
+
+li h3:hover:before{
+    content:"";
+    font-weight:bold;
+    border: 3px solid;
+    margin-right: 1em;
+}
+
+li p{
+    margin-left: 1.2em;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+input{
+    outline: none;
+    border: solid 1px black;
+}
+
+form figcaption{
+    display: flex;
+    justify-content: space-between;
+}
+
+form textarea{
+    margin-top: 0.5em;
+    max-width: 99%;
+    min-height: 10em;
+}
+
+form figcaption input{
+    min-width: 20%;
+}
+
+#Bouton{
+    color: white;
+    background: cadetblue;
+    border: none;
+    border-radius: 2px;
+
+    width: 4em;
+    height: 2em;
+    justify-items: left;
+    margin-top: 0.5em;
+
+}
+
+/* Page 2 */
+
+
+.Projet a{
+    text-decoration: none;
+}
+
+.Projet h2{
+    text-align: center;
+    font-family: capture_itregular, serif;
+    color: black;
+}
+
+.iframe{
+    width: 100%;
+    height: 80%;
+    border: none;
+}
+
+/* Projet 1 */
+
+.second{
+    width: 50%;
+    height: 700px;
+}
+
+
+/* Projet 2 */
+
+.Openclassroom{
+    width: 40%;
+    height: 700px;
+}
+
+
+/* Projet 3*/
+
+.Avion{
+    width: 90%;
+    height: 400px;
+}
+
+
+/* Bouton retour */
+
+.retour{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+
+    background-color: darkgrey;
+    border-radius: 3px;
+    width: 10em;
+    margin: 1em auto 1em auto;
+}
+
+
+
+

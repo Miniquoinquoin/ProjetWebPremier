@@ -1,0 +1,373 @@
+/* Définition des polices personnalisées */
+
+@font-face
+{
+    font-family: 'BallparkWeiner';
+    src: url('fonts/ballpark.eot');
+    src: url('fonts/ballpark.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ballpark.woff') format('woff'),
+         url('fonts/ballpark.ttf') format('truetype'),
+         url('fonts/ballpark.svg#BallparkWeiner') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'Dayrom';
+    src: url('fonts/dayrom.eot');
+    src: url('fonts/dayrom.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dayrom.woff') format('woff'),
+         url('fonts/dayrom.ttf') format('truetype'),
+         url('fonts/dayrom.svg#Dayrom') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Mise en page */
+
+body{
+	background-image: url(images/fond_jaune.png);
+	min-width: 55em;
+
+
+}
+
+
+
+#block-page{
+	width: 95%;
+	max-width: 80em;
+	margin: auto;
+
+}
+
+	/* en tete */
+	
+header{
+	display: flex;
+	justify-content: space-between;
+	background: url(images/separateur.png) repeat-x bottom;
+	margin-bottom: 0.7em; 
+}
+
+	/* LOGO	*/
+
+#titre_principal
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#logo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+#logo img
+{
+    width: 59px;
+    height: 60px;
+}
+
+header h1
+{
+    font-family: 'BallparkWeiner', serif;
+    font-size: 2.5em;
+    font-weight: normal;
+    margin: 0 0 0 10px;
+}
+
+header h2
+{
+    font-family: Dayrom, serif;
+    font-size: 1.2em;
+    margin-top: -0.8em;
+    font-weight: normal;
+    align-self: flex-end;
+}
+
+
+	/* Menu de navigation */
+
+nav{
+	align-self: flex-end;
+}
+
+nav ul{
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+
+}
+
+nav ul li{
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: black;
+	font-size: 1.3em;
+	
+}
+
+nav ul li a:hover{
+	text-decoration: underline;
+	text-decoration-color: maroon;
+	color: maroon;
+	
+}
+
+
+	/* Bannière */
+
+#plandevue{
+	width: 100%;
+}
+
+#fond-noir-transparant{
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	bottom: 2.8em;
+	height: 2.5em;
+	color: rgba(255, 255, 255, 0.8);
+	align-items: center;
+}
+
+#bouton img{
+	height: 20px;
+	margin: 0 0 0 10px;
+}
+
+#click-bouton{
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+#bouton{
+	display: flex;
+	justify-content: space-around;
+	margin: 0 20px 0 0;
+	align-items: center;
+	background: linear-gradient(rgba(255,200,200,0.7), rgba(200, 0, 0, 0.7));
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 10px;
+	height: 2em;
+	box-shadow: 3px 3px 3px black;
+
+}
+
+#text-photos{
+	margin-left: 10px;
+}
+
+	/* Section */
+	/* en tete */
+
+.top-section{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.top-section h2{
+	font-weight: normal;
+}
+
+	/* mise en page */
+
+section{
+	display: flex;
+	align-items: flex-start;
+	position: relative;
+	bottom: 2em;
+}
+
+#zone-text{
+	flex: 2.2;
+}
+
+#auteur{
+	flex: 1;
+	max-width: 17em;
+}
+
+section{
+	background: url(images/separateur.png) repeat-x bottom;
+}
+
+
+	/* block coter */
+
+#auteur{
+	background: url(images/bulle.png) no-repeat left center;
+	padding: 0.7em;
+}
+
+section aside{
+	background-color: #7A6767;
+	border-radius: 5px;
+	padding: 0 1em 0.5em 1em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+
+}
+
+aside h2{
+	color: white;
+	font-family: Dayrom, Arial, serif ;
+	font-weight: normal;
+	font-size: 1.1em;
+}
+
+aside p{
+	color: white;
+	font-weight: normal;
+}
+
+	/* menu fermant */
+
+#bouton-fermant{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	bottom: 2.2em;
+}
+
+#bouton-fermant a{
+	width: 3.8em;
+	height: 3.2em;
+}
+
+
+	/* footer */
+
+footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	position: relative;
+	bottom: 4em;
+}
+
+footer h2{
+	font-weight: normal;
+	font-size: 1.2em;
+}
+
+footer img{
+	border: black 1px solid;
+}
+
+#Numero{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0;
+	position: relative;
+	bottom: 0.8em;
+	right: 1em;
+}
+
+footer ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0 1em 0 1em;
+}
+
+footer li{
+	background: url(images/ico_liensexterne.png) no-repeat;
+	background-position: 0 0.4em;
+	padding-left: 0.8em;
+	padding-bottom: 0.2em;
+	font-weight: bolder;
+	font-size: 0.8em;
+	color: darkred;
+	font-family: Dayrom, Arial, serif ;
+}
+
+#footer-page2{
+	position: relative;
+	bottom: 5.8em;
+}
+
+
+@media (max-width:  55em)
+{	
+	body{
+		min-width: 20em;
+	}
+
+	/* Retirer la baniere */
+
+	#banniere{
+		display: none;
+	}
+
+	section{
+		position: relative;
+		bottom: 0;
+	}
+
+	/* Menu nav vertical */
+
+	nav ul{
+		flex-direction: column;
+	}
+
+	/* auteur */
+
+	section{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#auteur{
+		background-image: none;
+		padding: 0.7em;
+		max-width: none;
+		width: 90%;
+	}
+
+	aside{
+		width: 100%;
+	}
+
+	/* Bas de page */
+
+	#bouton-fermant{
+		position: relative;
+		bottom: 0.2em;
+	}
+
+	footer{
+		bottom: 1.5em;
+	}
+
+}
+
+@media (max-width:  40em)
+{
+	footer{
+	flex-direction: column;
+	align-items: center;
+	bottom: 1em;
+	}
+
+	footer h2{
+		text-align: center;
+	}
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mes Projet</title>
+	<link rel="stylesheet" type="text/css" href="style sombre.css">
+
+	<script type="text/javascript">
+
+		function lancement(){
+		if (localStorage.getItem("style") === null)
+		{
+			localStorage.setItem('style',"None");
+		}
+		else if(localStorage.getItem("style") === "Clair")
+		{
+			document.getElementsByTagName("link")[0].href = "style clair.css";
+
+		}
+		else if(localStorage.getItem("style") === "Sombre")
+		{
+			document.getElementsByTagName("link")[0].href = "style sombre.css";
+
+		}
+		else if(localStorage.getItem("style") === "Fantaisie")
+		{
+			document.getElementsByTagName("link")[0].href = "style fantaisie.css";
+
+		}
+		else
+		{
+			localStorage.setItem('style',"None");
+			document.getElementsByTagName("link")[0].href = "style:None";
+		}
+	}
+
+
+	
+	function change_theme(n){
+		if(n == 1)
+		{
+			style = "style clair.css";
+			localStorage.setItem('style',"Clair");
+		}
+		else if(n == 2)
+		{
+			style = "style sombre.css";
+			localStorage.setItem('style',"Sombre");
+		}
+		else if(n == 3)
+		{
+			style = "style fantaisie.css";
+			localStorage.setItem('style',"Fantaisie");
+		}
+		else
+		{
+			style = null;
+			localStorage.setItem('style',"None");
+			s = "style=None";
+		}
+		document.getElementsByTagName("link")[0].href = style;
+	}
+
+	</script>
+</head>
+<body>
+	<header>
+		<nav>
+            <ul>
+                <li><button onclick="change_theme(2)">Sombre</button> </li>
+                <li><button onclick="change_theme(1)">Clair</button></li>
+                <li><button onclick="change_theme(3)">Fantaisie</button></li>
+            </ul>
+            <a href="#"><i class="fa fa-chevron-up fa-4x" aria-hidden="true"></i></a>
+        </nav>
+        <video autoplay muted id="video_fond">
+		  	<source src="video/Fond_top_fantaisie.webm" type="video/webm">
+		  	<source src="video/Fond_top_fantaisie.mp4" type="video/mp4">
+		  	<p>Votre navigateur ne prend pas en charge les vidéos HTML5.
+     			Voici <a href="video/Fond_top_fantaisie.mp4">un lien pour télécharger la vidéo</a>.</p>
+		</video>
+        <div class="en-tete">
+			<h1>Oups</h1>
+			<p>Malheureusement je ne sais pas récupérer les donnée d'un forum. <br /> Mais vous venez tout de même de trouver la seule façon d'accéder à la page 2 qui montre une partie de mets projet web. </p>
+		</div>
+	</header>
+	<section>
+
+		<div class="Projet second">
+			<a href="Projet_Autres/SNT_2nd/test.html">
+				<h2>Projet SNT 2nd</h2>
+			</a>
+			<iframe class="iframe" title="Iframe 2nd" src="Projet_Autres/SNT_2nd/test.html"></iframe>
+		</div>
+
+		<div class="Projet Openclassroom">
+			<a href="Projet_Autres/Openclassroom_ete_2021/tp.html">
+				<h2>été 2021 Oppenclassroom</h2>
+			</a>
+			<iframe class="iframe" src="Projet_Autres/Openclassroom_ete_2021/tp.html"></iframe>
+		</div>
+
+	</section>
+	<section>
+		<div class="Projet Avion">
+			<a href="Projet_Autres/Logo avion/test.html">
+				<h2>Dans l'avion été 2021</h2>
+			</a>
+			<iframe class="iframe" src="Projet_Autres/Logo avion/test.html" ></iframe>
+		</div>
+	</section>
+		
+
+
+	<footer>
+		<a href="page.html" class="retour">Retour à la page d'accueil</a>
+	</footer>
+
+</body>
+</html>

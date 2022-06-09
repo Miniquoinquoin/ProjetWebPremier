@@ -1,0 +1,109 @@
+body{
+	font-family : Papyrus,fantasy;
+}
+
+
+h2{
+	font-size: 1,5em;
+}
+.GT{ 
+	color: black;
+	border: solid 3px black;
+	background-color: white;
+	text-align: center;
+	height: 90px;
+}
+
+.A{
+	background: #FFFFFF ;
+	color: black ;
+	text-align: center;
+	border: solid 3px black;
+}
+
+
+a{
+	text-decoration:none;
+	color: black;
+	font-size: 1em;
+	font-weight:bolder;
+	
+}
+
+p a{
+	text-decoration:none;
+	color: black;
+	font-size: 2em;
+	font-weight:bolder;
+	
+}
+
+p a:hover{
+	font-size: 3em;
+}
+
+img{
+	width:95%;
+	max-width: 500px;
+	
+}
+
+
+/*Pour les flex box */
+
+.Box{
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.B{
+	flex: 1 1 auto;
+}
+
+.C{ 
+	flex: 1 1 500px
+}
+
+.D{
+	flex: 1 1 300px
+}
+
+.E{ 
+	flex: 2 1 500px
+}
+
+.Titre_h1{
+	flex: 80 1 auto;
+}
+
+.Button{
+	flex: 1 1 auto;
+	height: 90px;
+}
+
+/* Centré les liste */
+
+ul , ol
+{
+    list-style-position : inside;
+    margin-left: auto;
+    margin-right: auto;
+    width : 95%;
+}
+
+ul li , ol li
+{
+    margin : auto;
+    text-align : left;
+}
+
+/*Pour les button*/
+
+
+.fond_noir{
+	background-color: black;
+}
+
+.fond_orange{
+	background-color: #FF4200;
+}

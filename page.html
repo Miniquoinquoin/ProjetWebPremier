@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style sombre.css" id="theme_css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css"> <!-- Pour les logo -->
+	<title>Jonathan Heilmann</title>
+
+	<script src='dist/core.js'></script>
+	<script type="text/javascript">
+		
+		function lancement(){
+		if (localStorage.getItem("style") === null)
+		{
+			localStorage.setItem('style',"None");
+		}
+		else if(localStorage.getItem("style") === "Clair")
+		{
+			document.getElementsByTagName("link")[0].href = "style clair.css";
+			
+
+		}
+		else if(localStorage.getItem("style") === "Sombre")
+		{
+			document.getElementsByTagName("link")[0].href = "style sombre.css";
+
+		}
+		else if(localStorage.getItem("style") === "Fantaisie")
+		{
+			document.getElementsByTagName("link")[0].href = "style fantaisie.css";
+
+		}
+		else
+		{
+			localStorage.setItem('style',"None");
+			document.getElementsByTagName("link")[0].href = "style:None";
+		}
+		}
+
+
+	
+	function change_theme(n){
+		if(n == 1)
+		{
+			style = "style clair.css";
+			localStorage.setItem('style',"Clair");
+			document.getElementById('image_maths').src = "Image/maths_clair.png";
+			document.getElementById('image_nsi').src = "Image/nsi_clair.png";
+			document.getElementById('image_si').src = "Image/si_clair.png";
+		}
+		else if(n == 2)
+		{
+			style = "style sombre.css";
+			localStorage.setItem('style',"Sombre");
+			document.getElementById('image_maths').src = "Image/maths_sombre.png";
+			document.getElementById('image_nsi').src = "Image/nsi_sombre.png";
+			document.getElementById('image_si').src = "Image/si_sombre.png";
+
+		}
+		else if(n == 3)
+		{
+			style = "style fantaisie.css";
+			localStorage.setItem('style',"Fantaisie");
+			document.getElementById('image_maths').src = "Image/maths_fantaisie.png";
+			document.getElementById('image_nsi').src = "Image/nsi_fantaisie.png";
+			document.getElementById('image_si').src = "Image/si_fantaisie.png";
+		}
+		else
+		{
+			style = null;
+			localStorage.setItem('style',"None");
+			s = "style=None";
+		}
+		document.getElementsByTagName("link")[0].href = style;
+	}
+
+	function PlusOuMoin() {
+		if (document.getElementById('Bouton_Plus').innerText === 'Plus') {
+			document.getElementById('tableau').style = "display: flex;";
+			document.getElementById('Bouton_Plus').innerHTML = "Moins";
+		} 
+		else {
+			document.getElementById('tableau').style = "display: none;";
+			document.getElementById('Bouton_Plus').innerHTML = "Plus";
+		}
+		
+	}
+	</script>
+</head>
+	<body>
+		<header>
+			<nav>
+                <ul>
+                    <li><button onclick="change_theme(2)">Sombre</button> </li>
+                    <li><button onclick="change_theme(1)">Clair</button></li>
+                    <li><button onclick="change_theme(3)">Fantaisie</button></li>
+                </ul>
+                <a href="#"><i class="fa fa-chevron-up fa-4x" aria-hidden="true"></i></a>
+            </nav>
+            <div class="en-tete">
+            	<video autoplay muted id="video_fond">
+				  	<source src="video/Fond_top_fantaisie.webm" type="video/webm">
+				  	<source src="video/Fond_top_fantaisie.mp4" type="video/mp4">
+				  	<p>Votre navigateur ne prend pas en charge les vidéos HTML5.
+		     			Voici <a href="video/Fond_top_fantaisie.mp4">un lien pour télécharger la vidéo</a>.</p>
+				</video>
+				<h1 id="typewriter">Bienvenue sur mon Site</h1>
+
+
+				  <script src='dist/core.js'></script>
+				  <script type='text/javascript'>
+				    const typewriter = new Typewriter('#typewriter', {
+				      loop: true,
+				    });
+
+				    typewriter.typeString('Bienvenue sur mon site!')
+				      .pauseFor(2500)
+				      .deleteAll()
+				      .typeString('Je vais vous présenter les études')
+				      .pauseFor(100)
+				      .deleteChars(10)
+				      .typeString('<strong>mes étude en 1<sup>ère</sup><strong>')
+				      .pauseFor(2500)
+				      .start();
+				  </script>
+				<p>Salut, je suis étudient en 1<sup>ère</sup> générale au <a href="https://www.lycee-stanislas.fr/" target="_bold">lycée Stanislas de Wissembourg</a>, cette page présente mon expérience de lycéen. <br />Bonne lecture</p>
+			</div>
+		</header>
+		<section>
+			<p id="introduction">En première générale on étudie de nombreuses matières, comme le Français, l'histoire, les langues ou encore les sciences. À sa il faut ajouter 3 spécialités au choix parmi un grand nombre. Cela va de l'histoire à la philosophie en passe par le cinéma ou les sciences économique et sociale. Sans oublier les Science telle que les maths, la physique, ingénierie, l'informatique et les Science de la vie et de la Terre.</p>
+		</section>
+		<section>
+			<article>
+				<i class="fa fa-calculator fa-4x" aria-hidden="true"></i>
+
+				<h2>Maths</h2>
+				<p>Les mathématiques en enseignement de spécialité en classe de première permettent de voir de grands chapitres comme l’algèbre, l’analyse, la géométrie, les probabilités et les statistiques, l’algorithmique et la programmation. Un programme complet mais aussi très chargé</p>
+
+				<img src="Image/maths_sombre.png" class="Cadre" id="image_maths">
+
+				<h3>Utile ?</h3>
+				<p>Pour certains, les mathématiques, c’est la vie. Pour d’autres, les maths représentent une matière inutile et compliquée. Pourtant, les maths sont belles et bien utiles dans la vie de tous les jours. 
+					<br />
+				Selon un chercheur en sociologie de la Northeastern University, dans le Massachusetts aux États-Unis, 94 % des salariés ont besoin des mathématiques dans leurs activités professionnelles.</p>
+					
+				
+				<p>Choisir l’enseignement de spécialité maths n’est pas uniquement bon à être mis sur une fiche pédagogique ou un CV. Choisir l’enseignement des mathématiques <strong>c’est avant tout se préparer aux études supérieures.</strong></p>
+				
+
+			</article>
+			<article>
+				<i class="fa fa-desktop fa-4x" aria-hidden="true"></i>
+
+				<h2>NSI</h2>
+				<p>Face à la place grandissante du numérique et de la digitalisation dans nos sociétés, l’initiation de l’informatique au lycée est devenue fondamentale. Longtemps négligée par l’enseignement, surtout en France, l’informatique occupe aujourd’hui une place essentielle dans l’apprentissage.
+					<br />
+				Au lycée, les élèves approfondissent leurs connaissances en entrant dans le monde de la science informatique. Ils apprennent alors à maîtriser les différents concepts comme la programmation, les systèmes de bases de données, les algorithmes…</p>
+
+				<img src="Image/nsi_sombre.png" class="Cadre" id="image_nsi">
+
+				<h3>A quoi sa sert ?</h3>
+				<p>Il est évident que l’informatique et le numérique prennent de plus en plus de place dans notre quotidien. Savoir maîtriser l’informatique et comprendre le numérique deviennent incontournable aussi bien dans notre vie privée que dans notre vie professionnelle. Et tous les secteurs d’activité sont concernés. <strong>Les enjeux de l’apprentissage de l’informatique à l’école sont donc importants.</strong></p>
+
+
+			</article>
+			<article>
+				<i class="fa fa-cogs fa-4x" aria-hidden="true"></i>
+
+				<h2>SI</h2>
+				<p>Les sciences de l’ingénieur mobilisent les approches scientifiques et technologiques des élèves afin de résoudre des problèmes simples liés à des cas concrets de la société moderne. On y aborde des domaines tels que la robotique, l’environnement, le sport, l’habitat, la bionique, l’énergie etc..
+					<br />
+				 Il permet de constituer une large base de connaissances scientifiques et technologiques.
+				</p>
+
+				<div>
+					<p>Ainsi, les élèves sont évalués sur leurs compétences à analyser :</p>
+					<ul>
+						<li>l’organisation fonctionnelle et matérielle d’un produit</li>
+						<li>les échanges d’énergie, les transmissions de puissance, les échanges et le traitement des informations</li>
+						<li> les écarts entre les performances attendues, simulées ou mesurées</li>
+					</ul>
+				</div>
+
+				<img src="Image/si_sombre.png" class="Cadre" id="image_si">
+
+				<p>Vous aimez imaginer des systèmes pour résoudre un petit problème du quotidien ou plus globalement répondant aux enjeux sociétaux de demain ? Vous êtes curieux de connaître comment un système ou un produit fonctionne ? Et bien vous devriez sûrement choisir la spécialité SI au lycée.</p>
+
+
+			</article>
+
+		</section>
+
+		<section id="tableau">
+			<table align="left" border="1" cellpadding="1" cellspacing="1">
+				<caption>
+					<h2>La répartition des heures</h2>
+				</caption>
+				<thead>
+					<tr class="separation">
+						<td> </td>
+						<th>Première</th>
+						<th>Terminale</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Enseignements communs</th>
+						<td> </td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td>Français</td>
+						<td>4h</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>Philosophie</td>
+						<td>-</td>
+						<td>4h</td>
+					</tr>
+					<tr>
+						<td>Histoire-géographie</td>
+						<td>3h</td>
+						<td>3h</td>
+					</tr>
+					<tr>
+						<td>Enseignement moral et civique</td>
+						<td>0h30</td>
+						<td>0h30</td>
+					</tr>
+					<tr>
+						<td>Langues vivantes 1 et 2</td>
+						<td>4h30</td>
+						<td>4h30</td>
+					</tr>
+					<tr>
+						<td>EPS</td>
+						<td>2h</td>
+						<td>2h</td>
+					</tr>
+					<tr class="separation">
+						<td>Enseignement scientifique</td>
+						<td>2h</td>
+						<td>2h</td>
+					</tr>
+
+
+					<tr>
+						<th>Enseignements de spécialité</th>
+						<td> </td>
+						<td> </td>
+					</tr>
+					<tr>
+						<td>Mathématiques</td>
+						<td>4h</td>
+						<td>6h</td>
+					</tr>
+					<tr>
+						<td>Numérique et sciences informatiques</td>
+						<td>4h</td>
+						<td>6h</td>
+					</tr>
+					<tr>
+						<td>Sciences de l’ingénieur</td>
+						<td>4h</td>
+						<td>-</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<section class="bouton-padding">
+			<button id="Bouton_Plus" onclick="PlusOuMoin()">Plus</button>
+		</section>
+
+		
+
+		<footer>
+			<div class="footerpartie">
+				<h2 id="h2decal">CONTACT</h2>
+				<div class="footersection">
+					<div>
+						<ol>
+							<li>
+								<h3>Address</h3>
+								<p>10 rue invisible <br /> Soultz sous Forêts <br /> 67250 </p>
+							</li>
+							<li>
+								<h3>Social</h3>
+								<p>www.ici.com</p>
+							</li>
+						</ol>
+					</div>
+					<div>
+						<ol>
+							<li>
+								<h3>Email</h3>
+								<p>contactemoi@gmail.com</p>
+							</li>
+							<li>
+								<h3>Phone</h3>
+								<p>03 11 11 11 11</p>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+			<div class="footerpartie">
+				<h2>Question ?</h2>
+
+				<form method="post" action="page2.html">
+					<figcaption>
+						<input type="text" name="Name" id="Name" placeholder="Nom" required>
+
+						<input type="Email" name="Email" id="Email" placeholder="Email" required>
+					</figcaption>
+					<textarea name="Message" id="Message" placeholder="Message" required></textarea>
+					<input type="submit" name="Bouton" id="Bouton" value="Send">
+					
+				</form>
+
+			</div>
+		</footer>
+
+
+	</body>
+</html>

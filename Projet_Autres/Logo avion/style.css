@@ -1,0 +1,127 @@
+body{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: sans-serif;
+}	
+
+.block_page{
+	display: flex;
+	flex-direction: row;
+	border: 3px black solid;
+	border-radius: 1.2em;
+
+	margin: 0.5em;
+	max-width: 50em;
+}
+
+.block_info{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.logo_info{
+	flex: 5;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+}
+
+.logo_p{
+	flex: 2;
+	width: 95%;
+}
+
+.logo_p img{
+	width: 90%;
+}
+
+section{
+	flex: 5;
+}
+
+footer{
+	flex: 1;
+	background-color: lightgrey;
+	border-radius: 0 1em 1em 0;
+	padding: 0.5em;
+	margin: 0 0 0 0.5em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.box_info{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	font-size: 0.8em;
+}
+
+.box_info_mini{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-around;
+}
+
+.box_info_mini div{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	justify-items: space-around;
+}
+
+.box_info_mini div p{
+	margin: 0.5em;
+	font-weight: bold;
+}
+
+.box_info_mini div img{
+	margin: 0.5em;
+	width: 30%;
+	height: 60%;
+}
+
+ul{
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+
+}
+
+ul li{
+	padding: 0.5em 0 0.5em 0;
+	font-size: 0.7em;
+}
+
+.logo_avion{
+	padding: 0.5em 0 0.5em 3.1em;
+	background: url(logo_avion.png) 0.6em no-repeat;
+	background-size: 2.5em;
+
+
+}
+
+.logo_play{
+	padding: 0.5em 0 0.5em 3em;
+	background: url(logo_play.png) 0.8em no-repeat;
+	background-size: 2em;
+}
+
+footer h1{
+	font-size: 1em;
+	text-align: center;
+}
+footer p{
+	font-size: 0.8em;
+	text-align: center;
+}
+
+span{
+	font-weight: bold;
+}
